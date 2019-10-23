@@ -27,10 +27,10 @@ class Song
   end
 
   def artist_name(artist_name)
-    temp_array = file_name.split(" - ")
-    artist_name = temp_array[0]
-    song_name = temp_array[1]
-    file_type = temp_array[2]
+    #temp_array = file_name.split(" - ")
+    #artist_name = temp_array[0]
+    #song_name = temp_array[1]
+    #file_type = temp_array[2]
     
     song.artist = Artist.find_or_create_by_name(artist_name)
   end
