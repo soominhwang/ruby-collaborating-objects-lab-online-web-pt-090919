@@ -32,8 +32,7 @@ class Song
     #song_name = temp_array[1]
     #file_type = temp_array[2]
 
-    song.artist = Artist.find_or_create_by_name(artist_name)
-    song
+    @artist = Artist.find_or_create_by_name(artist_name)
   end
 
 end
