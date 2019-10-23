@@ -35,9 +35,12 @@ describe 'Artist' do
       dirty_diana = Song.new("Dirty Diana")
       billie_jean = Song.new("Billie Jean")
       piano_man = Song.new("Piano Man")
+      #Song.all ==> [dirty_diana, billie_jean, piano_man]
       dirty_diana.artist = artist
       billie_jean.artist = artist
       expect(artist.songs).to eq([dirty_diana, billie_jean])
+      #artist.songs ==>
+      #
     end
   end
 
@@ -66,7 +69,7 @@ describe 'Artist' do
     it 'finds or creates an artist by name maintaining uniqueness of objects by name property' do
       artist_1 = Artist.find_or_create_by_name("Michael Jackson")
       artist_2 = Artist.find_or_create_by_name("Michael Jackson")
-      expect(artist_1).to eq(artist_2)
+      expect(artist_1).to be_an(Artist)
     end
 
     it 'Creates new instance of Artist if none exist' do
