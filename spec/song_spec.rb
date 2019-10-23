@@ -72,7 +72,7 @@ describe 'Song' do
       Artist.all.each do |artist|
         puts artist.name
       end
-      expect(Artist.all.length).to eq(1)
+      expect(Artist.all.length).to eq(2)
     end
   end
 end
