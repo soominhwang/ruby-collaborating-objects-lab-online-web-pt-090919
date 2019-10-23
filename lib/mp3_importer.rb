@@ -15,7 +15,7 @@ class MP3Importer
   @filename = filenames
  end
 
- def import
+ def import(filename)
 
  end
 end
