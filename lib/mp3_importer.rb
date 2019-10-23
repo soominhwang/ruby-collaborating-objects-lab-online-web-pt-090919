@@ -6,7 +6,7 @@ class MP3Importer
     @filenames = []
   end
 
-  def files
+  def files(filename)
     Dir.entries(path).each do |filename|
       @filenames << "#{filename}"
     end
