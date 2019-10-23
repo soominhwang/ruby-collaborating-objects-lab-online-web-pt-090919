@@ -20,13 +20,10 @@ class Song
 
 
     song = Song.new(song_name)
-    song.artist = artist.find_or_create_by_name(artist_name)
+    song.artist = Artist.find_or_create_by_name(artist_name)
     # called .name on song.artist
     # undefined method `name=' for nil:NilClass
     # therefore song.artist is nil
-    #
-
-    song
 
   end
 
